@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Dueños</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Lista de Dueños</h1>
+    </header>
+
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Usuario</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itera sobre la lista de dueños -->
+                <tr th:each="dueno : ${duenoLista}">
+                    <td th:text="${dueno.id_dueno}">1</td>
+                    <td th:text="${dueno.nombre}">Nombre</td>
+                    <td th:text="${dueno.telefono}">Teléfono</td>
+                    <td th:text="${dueno.direccion}">Dirección</td>
+                    <td th:text="${dueno.usuario}">Usuario</td>
+                    <td th:text="${dueno.password}">Password</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 Pedro Gutierrez</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Dueño</title>
+</head>
+<body>
+    <h1>Registrar Nuevo Dueño</h1>
+    <form th:action="@{/Dueno/guardar}" th:object="${dueno}" method="post">
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required/><br/>
+        <label>Teléfono:</label>
+        <input type="text" th:field="*{telefono}" /><br/>
+        <label>Dirección:</label>
+        <input type="text" th:field="*{direccion}" /><br/>
+        <label>Usuario:</label>
+        <input type="text" th:field="*{usuario}" /><br/>
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" /><br/>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
