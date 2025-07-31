@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Dueño</title>
+	</head>
+	
+	<body>
+		<main>
+			<article>
+				<h2>Bienvenido: <span th:text="${dueno.usuario}">usuario</span></h2>
+				
+				<label th:text="'Nombre: '+${dueno.nombre}">Nombre</label><br>
+				<label th:text="'Telefono: '+${dueno.telefono}"></label><br>
+				<label th:text="'Direccion: '+${dueno.direccion}"></label>
+
+			</article>
+		</main>
+	</body>
+	
+</html>

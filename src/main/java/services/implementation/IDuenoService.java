@@ -10,5 +10,7 @@ public interface IDuenoService  {
 	
 	Dueno obtenerDueno(Integer id);
 	
+	Dueno obtenerDueno (String usuario, String password);
+	
 
 }

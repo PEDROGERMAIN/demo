@@ -29,4 +29,10 @@ public class DuenoService implements IDuenoService{
 		duenoRepository.save(dueno);	
 	}
 
+	@Override
+	public Dueno obtenerDueno(String usuario, String password) {
+		
+		return duenoRepository.findByUsuarioAndPassword(usuario, password).orElse(null);
+	}
+
 }
